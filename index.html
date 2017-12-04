@@ -1,1 +1,244 @@
-sdf
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Calc</title>
+<style type="text/css">
+	#calculator * {font-size: 50px;}
+	#calculator table {border: solid 3px silver; border-spacing: 3px; background-color: #EEE; height: 100%; width: 100%}
+	#calculator table td {border-spacing: 3px; }
+	#calculator table tr {height: calc(5000 /20); }
+	input.display {text-align: right;}
+
+	input[type= button] {width: 100%;}
+	input[type= number] {height: 100%;width: 100%; font-size: 15px;}
+	.main{ background-color: yellow; height: 100vh;}
+	
+	
+</style>
+</head>
+
+  <script type="text/javascript">
+function CalcTotals(){
+	calc.total20k.value = calc.input20k.value * 20000;
+	calc.total10k.value = calc.input10k.value * 10000;
+	calc.total5k.value = calc.input5k.value * 5000;
+	calc.total2k.value = calc.input2k.value * 2000;
+	calc.total1k.value = calc.input1k.value * 1000;
+	calc.total500.value = calc.input500.value * 500;
+	calc.total200.value = calc.input200.value * 200;
+	calc.total100.value = calc.input100.value * 100;
+	/*calc.total50.value = calc.input50.value * 50;
+	calc.total20.value = calc.input20.value * 20;
+	calc.total10.value = calc.input10.value * 10;
+	calc.total5.value = calc.input5.value * 5;
+	calc.total2.value = calc.input2.value * 2;
+	calc.total1.value = calc.input1.value * 1;
+	*/
+	calc.TotalResValue.value = (parseInt(calc.total20k.value)+
+								parseInt(calc.total10k.value)+
+								parseInt(calc.total5k.value)+
+								parseInt(calc.total2k.value)+
+								parseInt(calc.total1k.value)+	
+								parseInt(calc.total500.value)+
+								parseInt(calc.total200.value)+
+								parseInt(calc.total100.value)/*+
+								parseInt(calc.total50.value)+
+								parseInt(calc.total20.value)+
+								parseInt(calc.total10.value)+
+								parseInt(calc.total5.value)+
+								parseInt(calc.total2.value)+
+								parseInt(calc.total1.value)*/);
+};
+
+
+function ClearTotals(){
+	calc.total20k.value = "0";
+	calc.total10k.value = "0";
+	calc.total5k.value = "0";
+	calc.total2k.value = "0";
+	calc.total1k.value = "0";
+	calc.total500.value = "0";
+	calc.total200.value = "0";
+	calc.total100.value = "0";
+	/*calc.total50.value = "0";
+	calc.total20.value = "0";
+	calc.total10.value = "0";
+	calc.total5.value = "0";
+	calc.total2.value = "0";
+	calc.total1.value = "0";*/
+	
+	calc.TotalResValue.value = "0";
+	
+	calc.input20k.value = "";
+	calc.input10k.value = "";
+	calc.input5k.value = "";
+	calc.input2k.value = "";
+	calc.input1k.value = "";
+	calc.input500.value = "";
+	calc.input200.value = "";
+	calc.input100.value = "";
+	/*calc.input50.value = "";
+	calc.input20.value = "";
+	calc.input10.value = "";
+	calc.input5.value = "";
+	calc.input2.value = "";
+	calc.input1.value = "";*/
+};
+  
+  </script>
+
+<body>
+
+<div class="main">
+	<form name="calc" id="calculator">
+		<table>
+			 <tr>
+				<th>Купюра</th>
+				<th>Количество</th>
+				<th>Сумма</th>
+			</tr>
+			<tr>
+				<td>
+					<font size="3" color="red">20K</font>
+				</td>
+				<td>
+					<input type="number" name="input20k" size="5" class="display" value="" value="0">
+				</td>
+				<td>
+					<input type="number" name="total20k" size="16" class="display" value="0" value="0" disabled="disabled">
+			
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<font size="3" color="red">10K</font>
+				</td>
+				<td>
+					<input type="number"  size="5" class="display" value="" name="input10k">
+				</td>
+				<td>
+					<input type="number"  size="16" class="display" value="0" name="total10k" disabled="disabled">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<font size="3" color="red">5K</font>
+				</td>
+				<td>
+					<input type="number" name="input5k" size="5" class="display" value="">
+				</td>
+				<td>
+					<input type="number"  size="16" class="display" value="0" name="total5k" disabled="disabled">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<font size="3" color="red">2K</font>
+				</td>
+				<td>
+					<input type="number" name="input2k" size="5" class="display" value="">
+				</td>
+				<td>
+					<input type="number"  size="16" class="display" value="0" name="total2k" disabled="disabled">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<font size="3" color="red">1K</font>
+				</td>
+				<td>
+					<input type="number" name="input1k" size="5" class="display" value="">
+				</td>
+				<td>
+					<input type="number"  size="16" class="display" value="0" name="total1k" disabled="disabled">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<font size="3" color="red">500</font>
+				</td>
+				<td>
+					<input type="number" name="input500" size="5" class="display" value="">
+				</td>
+				<td>
+					<input type="number"  size="16" class="display" value="0" name="total500" disabled="disabled">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<font size="3" color="red">200</font>
+				</td>
+				<td>
+					<input type="number" name="input200" size="5" class="display" value="">
+				</td>
+				<td>
+					<input type="number"  size="16" class="display" value="0" name="total200" disabled="disabled">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<font size="3" color="red">100</font>
+				</td>
+				<td>
+					<input type="number" name="input100" size="5" class="display" value="">
+				</td>
+				<td>
+					<input type="number"  size="16" class="display" value="0" name="total100" disabled="disabled">
+				</td>
+			</tr>
+			
+			
+			
+			<tr>
+			
+				<td colspan="3">
+					<hr>
+				</td>	
+			
+			
+			</tr>
+			
+			<tr>
+			
+				<td>
+					<label name="TotalRes">Результат: </label>  <Br>
+				</td>	
+				
+				<td colspan="2">
+					<input type="number" name="TotalResValue" size="10" class="display" value="0" disabled="disabled" style="width: 100%"> <Br>
+				</td>	
+			
+			
+			</tr>
+			
+			<tr>
+			
+				<td>
+				
+					
+					<input type="button" name="one" value="Считать" OnClick="CalcTotals()"><br>
+					
+				</td>
+
+				<td colspan="2">
+				
+					
+					
+					<input type="button" name="two" value="Очистить" OnClick="ClearTotals()"><BR>
+				</td>				
+			
+			
+			</tr>
+		</table>
+				
+	</form>
+</div>
+</body>
+</html>
